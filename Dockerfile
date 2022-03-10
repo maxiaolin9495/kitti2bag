@@ -9,6 +9,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 COPY . /kitti2bag
 RUN pip install pandas==0.23.0 && \
+	  pip install progressbar2==3.41.0 && \
+	  pip install python-utils==2.3.0 && \
     pip install -e /kitti2bag
 
 WORKDIR /data
